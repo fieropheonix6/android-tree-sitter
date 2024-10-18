@@ -1,3 +1,7 @@
+> [!WARNING]
+> 
+> THIS PROJECT IS NOT MAINTAINED ANYMORE. 
+
 # android-tree-sitter
 
 <a href="https://github.com/itsaky/AndroidIDE"><img src="https://androidide.com/github/img/androidide.php?part&for-the-badge"/></a><br><br>
@@ -16,6 +20,12 @@ implementation 'com.itsaky.androidide.treesitter:android-tree-sitter:<version>'
 // grammar libraries
 // <language> is the name of the language grammar. e.g. 'java', 'python', 'xml', etc.
 implementation 'com.itsaky.androidide.treesitter:tree-sitter-<language>:<version>'
+```
+
+Before using tree sitter, load the native library when appropriate (e.g. in the `onCreate()` method of your `Application` class, or in your activity) :
+
+```java
+TreeSitter.loadLibrary();
 ```
 
 The following grammars have been published to Maven central :
